@@ -11,9 +11,9 @@ function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', margin: 'auto', backgroundColor: 'black', color: 'white', gap: '100px' }}>
       <div className='responsive' style={{ display: 'flex', justifyContent: 'center', margin: '20px', gap: '10px' }}>
-        <button className='my-button' onClick={() => setActiveGraph('BarGraph')}>Alert Counts by Signature</button>
-        <button className='my-button' onClick={() => setActiveGraph('PieChart')}>Alert Distribution by Category</button>
-        <button className='my-button' onClick={() => setActiveGraph('LineChart')}>Alerts Over Time</button>
+        <button className='my-button' onClick={() => setActiveGraph('BarGraph')}>Bar Graph</button>
+        <button className='my-button' onClick={() => setActiveGraph('PieChart')}>Pie Chart</button>
+        <button className='my-button' onClick={() => setActiveGraph('LineChart')}>Line Graph</button>
         <button className='my-button' onClick={() => setActiveGraph('StackedBarGraph')}>Stacked Bar Graph</button>
       </div>
 
