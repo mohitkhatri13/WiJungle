@@ -7,10 +7,8 @@ const StackedBarGraph = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-        // Simulate fetching data from an API or database
         const jsonData = alertsData;
   
-        // Process data to get count of alerts by category and time
         const alertsByTimeAndCategory = jsonData.reduce((acc, item) => {
           const timestamp = format(parseISO(item.timestamp), 'yyyy-MM-dd HH:mm:ss');
           const category = item.alert?.category || 'Unknown'; // Check if item.alert exists
@@ -80,7 +78,7 @@ const StackedBarGraph = () => {
 
   return (
     <div style={{display:'flex' ,flexDirection:'column' }} >
-      <h2 className='headings' style={{margin:'auto', marginBottom:'100px',fontSize:'50px',marginTop:'20px' }} >Stacked Bar Graph</h2>
+      <h2 className='headings' >Stacked Bar Graph</h2>
       <div >
       {barData && <Bar data={barData} options={barOptions} />}
       </div>

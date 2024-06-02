@@ -6,8 +6,6 @@ import { format, parseISO } from 'date-fns';
 
 import { alertsData } from '../Data/Dataone';
 
-
-// Process data to get count of alerts by time for Line Chart
 const alertsByTime = alertsData.reduce((acc, alert) => {
   const timestamp = format(parseISO(alert.timestamp), 'yyyy-MM-dd HH:mm:ss');
   acc[timestamp] = (acc[timestamp] || 0) + 1;
@@ -54,7 +52,7 @@ const lineOptions = {
 const LineChart = () => {
   return (
     <div style={{display:'flex' ,flexDirection:'column' }}>
-      <h2 className='headings' style={{margin:'auto', marginBottom:'100px',fontSize:'50px',marginTop:'20px' }}>Alerts Over Time</h2>
+      <h2 className='headings'>Alerts Over Time</h2>
       <Line data={lineData} options={lineOptions} />
     </div>
   );

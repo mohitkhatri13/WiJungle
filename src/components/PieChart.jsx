@@ -2,8 +2,6 @@ import React from 'react';
 import { Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
 import { alertsData } from '../Data/Dataone';
-
-// Process data to get count of alerts by category
 const categoryCounts = alertsData.reduce((acc, alert) => {
   if (alert.alert && alert.alert.category) {
     const category = alert.alert.category;
@@ -42,7 +40,7 @@ const pieData = {
 const PieChart = () => {
   return (
     <div style={{display:'flex' ,flexDirection:'column' }}>
-      <h2  className='headings' style={{margin:'auto', marginBottom:'100px',fontSize:'50px',marginTop:'20px' }}>Alert Distribution by Category</h2>
+      <h2  className='headings'>Alert Distribution by Category</h2>
       <Pie data={pieData} />
     </div>
   );

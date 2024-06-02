@@ -17,9 +17,9 @@ function App() {
         <button className='my-button' onClick={() => setActiveGraph('StackedBarGraph')}>Stacked Bar Graph</button>
       </div>
 
-      <div>
+      <div style={{marginBottom:'100px'}}>
         {activeGraph === 'BarGraph' && (
-          <div style={{ width: '90vw', margin: 'auto' }}>
+          <div style={{ width: '90vw', margin: 'auto', }}>
             <BarGraph />
           </div>
         )}

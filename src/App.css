@@ -13,7 +13,6 @@
     overflow-x: auto;
   }
 }
-/* App.css */
 
 .my-button {
   background-color: black;
@@ -49,18 +48,31 @@
 
 
 }
+h2 {
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 20px;
+  font-size: 50px;
+  text-align: center; 
+}
+
 @media (max-width: 768px) {
-  .headings {
+  h2 {
     font-size: 40px;
-    margin-bottom: 50px;
-    margin-top: 10px;
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .headings{
+    font-size: 30px;
+    margin-bottom: 60px;
   }
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 375px) {
   .headings {
-    font-size: 30px;
-    margin-bottom: 30px;
-    margin-top: 5px;
+    font-size: 25px;
+    margin-bottom: 40px;
   }
 }
